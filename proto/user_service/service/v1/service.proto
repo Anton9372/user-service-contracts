@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package user_service.service.v1;
+
+option go_package = "user_service.service.v1";
+
+import "user_service/model/v1/user.proto";
+
+//protoc -I proto proto/user_service/model/v1/user.proto proto/user_service/service/v1/service.proto --go_out=./gen/go --go_opt=paths=source_relative --go-grpc_out=./gen/go/ --go-grpc_opt=paths=source_relative
+
+service UserService {
+  rpc Create(CreateRequest) returns (CreateResponse);
+  rpc GetByUUID(GetByUUIDRequest) returns (UserResponse);
+  rpc GetByEmailAndPassword(GetByEmailAndPasswordRequest) returns (UserResponse);
+  rpc Update(UpdateRequest) returns (UpdateResponse);
+  rpc Delete(DeleteRequest) returns (DeleteResponse);
+}
+
+message CreateRequest {
+  string name = 1;
+  string email = 2;
+  string password = 3;
+  string repeatedPassword = 4;
+}
+
+message CreateResponse {
+  string uuid = 1;
+}
+
+message GetByUUIDRequest {
+  string uuid = 1;
+}
+
+message UserResponse {
+  user_service.model.v1.User user = 1;
+}
+
+message GetByEmailAndPasswordRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message UpdateRequest {
+  string uuid = 1;
+  string name = 2;
+  string email = 3;
+  string oldPassword = 4;
+  string newPassword = 5;
+  string repeatedNewPassword = 6;
+}
+
+message UpdateResponse {
+  string error = 1;
+}
+
+message DeleteRequest {
+  string uuid = 1;
+}
+
+message DeleteResponse {
+  string error = 1;
+}
