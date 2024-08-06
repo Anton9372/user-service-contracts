@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v5.27.3
-// source: user_service/service/v1/service.proto
+// source: user_service/v1/service.proto
 
-package v1
+package pb_user_service
 
 import (
 	context "context"
@@ -19,11 +19,11 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	UserService_Create_FullMethodName                = "/user_service.service.v1.UserService/Create"
-	UserService_GetByUUID_FullMethodName             = "/user_service.service.v1.UserService/GetByUUID"
-	UserService_GetByEmailAndPassword_FullMethodName = "/user_service.service.v1.UserService/GetByEmailAndPassword"
-	UserService_Update_FullMethodName                = "/user_service.service.v1.UserService/Update"
-	UserService_Delete_FullMethodName                = "/user_service.service.v1.UserService/Delete"
+	UserService_Create_FullMethodName                = "/user_service.v1.UserService/Create"
+	UserService_GetByUUID_FullMethodName             = "/user_service.v1.UserService/GetByUUID"
+	UserService_GetByEmailAndPassword_FullMethodName = "/user_service.v1.UserService/GetByEmailAndPassword"
+	UserService_Update_FullMethodName                = "/user_service.v1.UserService/Update"
+	UserService_Delete_FullMethodName                = "/user_service.v1.UserService/Delete"
 )
 
 // UserServiceClient is the client API for UserService service.
@@ -244,7 +244,7 @@ func _UserService_Delete_Handler(srv interface{}, ctx context.Context, dec func(
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var UserService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "user_service.service.v1.UserService",
+	ServiceName: "user_service.v1.UserService",
 	HandlerType: (*UserServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -269,5 +269,5 @@ var UserService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "user_service/service/v1/service.proto",
+	Metadata: "user_service/v1/service.proto",
 }

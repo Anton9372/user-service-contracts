@@ -1,4 +1,4 @@
-module github.com/Anton9372/user-service-contracts
+module github.com/Anton9372/user-service-contracts/gen/go/user_service
 
 go 1.22.3
 
