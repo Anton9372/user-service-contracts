@@ -4,14 +4,14 @@
 // 	protoc        v5.27.3
 // source: user_service/service/v1/service.proto
 
-package user_service_service_v1
+package v1
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	user_service_model_v1 "user_service.model.v1"
+	v1 "user_service/model/v1"
 )
 
 const (
@@ -191,7 +191,7 @@ type UserResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	User *user_service_model_v1.User `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"`
+	User *v1.User `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"`
 }
 
 func (x *UserResponse) Reset() {
@@ -226,7 +226,7 @@ func (*UserResponse) Descriptor() ([]byte, []int) {
 	return file_user_service_service_v1_service_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *UserResponse) GetUser() *user_service_model_v1.User {
+func (x *UserResponse) GetUser() *v1.User {
 	if x != nil {
 		return x.User
 	}
@@ -599,8 +599,8 @@ var file_user_service_service_v1_service_proto_rawDesc = []byte{
 	0x1a, 0x27, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e,
 	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74,
 	0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x19, 0x5a, 0x17, 0x75, 0x73, 0x65,
-	0x72, 0x5f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
-	0x65, 0x2e, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x72, 0x5f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x65, 0x2f, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -626,7 +626,7 @@ var file_user_service_service_v1_service_proto_goTypes = []any{
 	(*UpdateResponse)(nil),               // 6: user_service.service.v1.UpdateResponse
 	(*DeleteRequest)(nil),                // 7: user_service.service.v1.DeleteRequest
 	(*DeleteResponse)(nil),               // 8: user_service.service.v1.DeleteResponse
-	(*user_service_model_v1.User)(nil),   // 9: user_service.model.v1.User
+	(*v1.User)(nil),                      // 9: user_service.model.v1.User
 }
 var file_user_service_service_v1_service_proto_depIdxs = []int32{
 	9, // 0: user_service.service.v1.UserResponse.user:type_name -> user_service.model.v1.User
