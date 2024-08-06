@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package user_service.model.v1;
 
-option go_package = "user_service.model.v1";
+option go_package = "github.com/Anton9372/user-service-contracts/gen/go/user_service/model/v1";
 
 message User {
   string uuid = 1;
