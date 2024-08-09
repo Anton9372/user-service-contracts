@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package user_service.model.v1;
+package user_service.v1;
 
-option go_package = "github.com/Anton9372/user-service-contracts/gen/go/user_service/model/v1;pb_user";
+option go_package = "github.com/Anton9372/user-service-contracts/gen/go/user_service/v1;pb_user_service";
 
 message User {
   string uuid = 1;
