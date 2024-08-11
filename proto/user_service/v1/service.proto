@@ -44,7 +44,7 @@ message UpdateRequest {
   string uuid = 1;
   optional string name = 2;
   optional string email = 3;
-  optional string oldPassword = 4;
+  string password = 4;
   optional string newPassword = 5;
   optional string repeatedNewPassword = 6;
 }
